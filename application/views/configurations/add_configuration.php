@@ -59,9 +59,9 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label" for="email">Email:
+                                        <label class="control-label" for="mail">Email:
                                         <span class="required">*</span></label>
-                                        <input type="text" class="required form-control" name="email" placeholder="Email *"
+                                        <input type="text" class="required form-control" name="mail" placeholder="Email *"
                                         value="<?php echo isset($configuration['email']) ? $configuration['email'] : ''; ?>">
                                         <span class="help-block">
                                         </span>
@@ -84,7 +84,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="bcc">BCC:</label>
-                                        <input type="text" class="required form-control" name="bcc" placeholder="BCC"
+                                        <input type="text" class="form-control" name="bcc" placeholder="BCC"
                                         value="<?php echo isset($configuration['bcc']) ? $configuration['bcc'] : ''; ?>">
                                     </div>
                                 </div>

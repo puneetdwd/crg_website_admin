@@ -47,7 +47,7 @@
                                 <input type="hidden" name="id" value="<?php echo $product['id']; ?>" />
                             <?php } ?>
 
-                            <div class="row">
+                           <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="org_id">Org. ID:</label>
@@ -68,7 +68,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                             <div class="row">
                                 <div class="col-md-6">

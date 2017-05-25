@@ -5,7 +5,7 @@ class Users extends Admin_Controller {
     public function __construct() {
         parent::__construct();
         
-        $this->template->write('title', 'SQIM | '.$this->user_type.' Dashboard');
+        $this->template->write('title', 'CRG | '.$this->user_type.' Dashboard');
         $this->template->write_view('header', 'templates/header', array('page' => 'masters'));
         $this->template->write_view('footer', 'templates/footer');
     }
@@ -191,8 +191,8 @@ class Users extends Admin_Controller {
         $url = base_url().'login';
 
         //render template
-        $this->session->sess_destroy();
-        //$this->session->destroy();
+        //$this->session->sess_destroy();
+        $this->session->destroy();
         redirect($url);
     }
     

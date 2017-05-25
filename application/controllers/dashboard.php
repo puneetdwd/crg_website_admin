@@ -10,7 +10,7 @@ class Dashboard extends Admin_Controller {
             $page = 'realtime';
         }
         //render template
-        $this->template->write('title', 'SSI | '.$this->user_type.' Dashboard');
+        $this->template->write('title', 'CRG | '.$this->user_type.' Dashboard');
         $this->template->write_view('header', 'templates/header', array('page' => $page));
         $this->template->write_view('footer', 'templates/footer');
 

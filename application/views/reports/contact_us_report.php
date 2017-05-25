@@ -58,25 +58,25 @@
                                                     <?php $date_type = $this->input->get('date_type');?>
                                                     <option value=""></option>
                                                     <option value="Q1" <?php if($date_type == 'Q1') { ?> selected="selected" <?php } ?>>
-                                                        Quarter 1
+                                                        Quarter 1 (01 Apr - 30 Jun)
                                                     </option>
                                                     <option value="Q2" <?php if($date_type == 'Q2') { ?> selected="selected" <?php } ?>>
-                                                        Quarter 2
+                                                        Quarter 2 (01 Jul - 30 Sep)
                                                     </option>
                                                     <option value="Q3" <?php if($date_type == 'Q3') { ?> selected="selected" <?php } ?>>
-                                                        Quarter 3
+                                                        Quarter 3 (01 Oct - 31 Dec)
                                                     </option>
                                                     <option value="Q4" <?php if($date_type == 'Q4') { ?> selected="selected" <?php } ?>>
-                                                        Quarter 4
+                                                        Quarter 4 (01 Jan - 31 Mar)
                                                     </option>
                                                     <option value="H1" <?php if($date_type == 'H1') { ?> selected="selected" <?php } ?>>
-                                                        Half-Year 1
+                                                        Half-Year 1 (01 Apr - 30 Sep)
                                                     </option>
                                                     <option value="H2" <?php if($date_type == 'H2') { ?> selected="selected" <?php } ?>>
-                                                        Half-Year 2
+                                                        Half-Year 2 (01 Oct - 31 Mar )
                                                     </option>
                                                     <option value="Y" <?php if($date_type == 'Y') { ?> selected="selected" <?php } ?>>
-                                                        Full Year
+                                                        Full Year (01 Apr - 31 Mar)
                                                     </option>
                                                 </select>
                                             </div>
@@ -202,7 +202,7 @@
                                                     
                                                     <td style="text-align:center;">
                                                         <?php if($report['cv_name'] != 'NA') { ?>
-                                                            <a href="<?php echo base_url()."assets/uploads/".$report['cv_name']; ?>" target="_blank"><?php echo $report['cv_name']; ?></a>
+                                                            <a href="<?php echo base_url(); ?>/<?php echo $report['cv_name']; ?>" target="_blank"><?php echo $report['cv_name']; ?></a>
                                                         <?php } else { ?>
                                                             NA
                                                         <?php } ?>

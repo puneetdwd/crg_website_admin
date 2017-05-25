@@ -127,7 +127,7 @@
                                             <?php foreach($products as $product) { ?>
                                                 <option value="<?php echo $product['id']; ?>" 
                                                 <?php if(in_array($product['id'], $sel_product)) { ?> selected="selected" <?php } ?>>
-                                                    <?php echo $product['name']; ?>
+                                                    <?php echo ucwords($product['name']); ?>
                                                 </option>
                                             <?php } ?>
                                             
