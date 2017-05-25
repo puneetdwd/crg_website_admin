@@ -130,7 +130,7 @@ class Users extends Admin_Controller {
             $validate->set_rules('password', 'Password', 'trim|required|xss_clean');
 
             if($validate->run() === TRUE) {
-                $response = $this->User_model->login_check($this->input->post('username'), $this->input->post('password'));
+                $response = $this->User_model->login_check($this->input->post('username'), $this->input->post('password'), $this->input->post('remember_me'));
 
                 if($response['status'] === 'SUCCESS') {
                     redirect(base_url().'dashboard'); // logged in redirect to index page.

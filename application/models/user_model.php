@@ -128,7 +128,7 @@ class User_model extends CI_Model {
         }
     }
     
-    function login_check($username, $password, $only_check = false) {
+    function login_check($username, $password, $remember_me, $only_check = false) {
         if (empty($username) || empty($password)) {
             return False;
         }
@@ -162,6 +162,20 @@ class User_model extends CI_Model {
                     if(!$only_check) {
                         $this->create_session($user);
                     }
+                    
+                    if(!empty($remember_me)) {
+                        //echo "cookies set"; exit;
+                        setcookie ("member_login",$username,time()+ (10 * 365 * 24 * 60 * 60));
+                        setcookie ("member_password",$password,time()+ (10 * 365 * 24 * 60 * 60));
+                    } else {
+                        if(isset($_COOKIE["member_login"])) {
+                            setcookie ("member_login","");
+                        }
+                        if(isset($_COOKIE["member_password"])) {
+                            setcookie ("member_password","");
+                        }
+                    }
+                    
                     return $response;
                 }
             }

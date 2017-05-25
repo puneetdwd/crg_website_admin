@@ -36,16 +36,27 @@
                             <?php } ?>
                             <div class="form-group">
                                  <label class="sr-only" for="username">Username</label>
-                                 <input type="text" id="username-login" class="form-control input-sm" placeholder="Username" name="username" required>
+                                 <input type="text" id="username-login" class="form-control input-sm" value="<?php if(isset($_COOKIE['member_login'])) { echo $_COOKIE['member_login']; } ?>"
+                                        placeholder="Username" name="username" required>
                             </div>
                             <div class="form-group">
                                  <label class="sr-only" for="password">Password</label>
-                                 <input type="password" class="form-control input-sm" name="password" placeholder="Password" required>
+                                 <input type="password" class="form-control input-sm" name="password" value="<?php if(isset($_COOKIE['member_password'])) { echo $_COOKIE['member_password']; } ?>"
+                                        placeholder="Password" required>
                             </div>
                             <button type="submit" class="button normals" style="margin-top: -7px; padding-bottom: 1px; padding-top: 1px;">
                                 Sign in
                             </button>
                             <div class="text-right">
+                                <label style="margin-right: 30%;" for="remember_me">
+                                    <input name="remember_me" value="checked" type="checkbox" <?php if(isset($_COOKIE['member_login'])) {
+                                            echo 'checked="checked"';
+                                    }
+                                    else {
+                                            echo '';
+                                    }
+                                    ?>>&nbsp;&nbsp;&nbsp;Remember Me
+                                </label>
                                 <a href="javascript:void(0);" id="forgot-password-login">Forgot Password?</a>
                             </div>
                         </form>
