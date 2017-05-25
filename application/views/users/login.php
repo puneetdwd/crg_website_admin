@@ -7,7 +7,7 @@
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8"/>
-        <title>SSI | Login</title>
+        <title>CRG Admin | Login</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <link rel="shortcut icon" href="favicon.ico"/>
@@ -22,7 +22,7 @@
         <div class="wrapper text-center">
             <header>
                 <div class="container">
-                    <a class="ir" href="#" id="logo" role="banner" title="Home">CRG India</a>
+                    <a class="ir" href="#" id="logo" role="banner" title="Home">LG India</a>
                     
                     <div id="utils">
                         
@@ -51,20 +51,20 @@
                         </form>
                     </div>
                     
-                    <div class="page-logo-text" style="text-align: center; font-size: 20px; margin-top: 34px; color: #f15d23;">Admin Panel - Website Leads</div>
+                    <div class="page-logo-text" style="text-align: center; font-size: 20px; margin-top: 34px; color: #C80541;">ADMIN PANEL - WEBSITE LEADS</div>
                 </div>
             </header>
             
             <div class="container">
                 <section id="hero-area" class="hero-area tab">
-                    <img src="assets/images/home_banner.jpg" height="420">
+                    <img src="assets/images/banner.jpg" >
                 </section>
             </div>
             
             <footer>
                 <div class="container">
                     <div class="legal">
-                        <span class="copy">Copyright &copy; 2017 LG Electronics Powered By Corporate Renaissance Group. All Rights Reserved.</span>
+                        <span class="copy">Copyright &copy; 2017 Powered By Corporate Renaissance Group. All Rights Reserved.</span>
                     </div>
                 </div>
             </footer>

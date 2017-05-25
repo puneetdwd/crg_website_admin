@@ -47,8 +47,8 @@
                         <table class="table table-hover table-light" id="make-data-table">
                             <thead>
                                 <tr>
-                                    <th>Org ID</th>
-                                    <th>Org Code</th>
+                                   <!-- <th>Org ID</th>
+                                    <th>Org Code</th>-->
                                     <th>Product Code</th>
                                     <th>Product Name</th>
                                     <th class="no_sort" style="width:100px;"></th>
@@ -57,8 +57,8 @@
                             <tbody>
                                 <?php foreach($products as $product) { ?>
                                     <tr>
-                                        <td><?php echo $product['org_id']; ?></td>
-                                        <td><?php echo $product['org_name']; ?></td>
+                                        <!--<td><?php echo $product['org_id']; ?></td>
+                                        <td><?php echo $product['org_name']; ?></td>-->
                                         <td><?php echo $product['code']; ?></td>
                                         <td><?php echo $product['name']; ?></td>
                                         <td nowrap>

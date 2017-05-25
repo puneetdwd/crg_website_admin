@@ -36,12 +36,12 @@ class Configurations extends Admin_Controller {
 
             $validate = $this->form_validation;
             $validate->set_rules('name', 'Name', 'trim|required|xss_clean');
-            $validate->set_rules('email', 'Email', 'trim|required|xss_clean');
+            //$validate->set_rules('email', 'Email', 'trim|required|xss_clean');
             $validate->set_rules('product', 'Product', 'trim|required|xss_clean');
 
             if($validate->run() === TRUE) {
                 $post_data = $this->input->post();
-
+                $post_data ['email'] = $this->input->post('mail');
                 $configuration_id = $this->Configuration_model->update_configuration($post_data, $this->input->post('id'));
                 if($configuration_id) {
                     $msg = isset($configuration['id']) ? 'updated' : 'added';
