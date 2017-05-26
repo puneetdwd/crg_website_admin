@@ -68,7 +68,7 @@
             
             <div class="container">
                 <section id="hero-area" class="hero-area tab">
-                    <img src="assets/images/banner.jpg" >
+                    <img src="assets/images/home_banner.jpg" >
                 </section>
             </div>
             

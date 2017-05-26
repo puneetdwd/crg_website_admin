@@ -5,6 +5,7 @@ class Configurations extends Admin_Controller {
     public function __construct() {
         parent::__construct(true);
         
+        $this->template->write('title', 'CRG | '.$this->user_type.' Configurations');
         $this->template->write_view('header', 'templates/header', array('page' => 'configurations'));
         $this->template->write_view('footer', 'templates/footer');
     }

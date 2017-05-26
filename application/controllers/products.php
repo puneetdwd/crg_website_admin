@@ -6,7 +6,7 @@ class Products extends Admin_Controller {
         parent::__construct(true);
 
         //render template
-        $this->template->write('title', 'CRG | '.$this->user_type.' Dashboard');
+        $this->template->write('title', 'CRG | '.$this->user_type.' Products');
         $this->template->write_view('header', 'templates/header', array('page' => 'masters'));
         $this->template->write_view('footer', 'templates/footer');
 

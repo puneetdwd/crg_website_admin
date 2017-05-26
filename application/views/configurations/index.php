@@ -49,6 +49,7 @@
                             <?php if(empty($configurations)) { ?>
                                 <p class="text-center">No Configuration yet.</p>
                             <?php } else { ?>
+                                <div class="table-responsive">
                                 <table class="table table-hover table-light">
                                     <thead>
                                         <tr>
@@ -83,6 +84,7 @@
                                         <?php $i++; } ?>
                                     </tbody>
                                 </table>
+                                </div>
                             <?php } ?>
                             
                         </div>

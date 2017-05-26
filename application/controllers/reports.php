@@ -5,6 +5,7 @@ class Reports extends Admin_Controller {
     public function __construct() {
         parent::__construct(true);
         
+        $this->template->write('title', 'CRG | '.$this->user_type.' Reports');
         $this->template->write_view('header', 'templates/header', array('page' => 'reports'));
         $this->template->write_view('footer', 'templates/footer');
     }

@@ -1804,4 +1804,53 @@ function int_n_float_only(event){
 
         return true;
   }
+  
+  function set_date_range(){
+      
+      var date_type = $('#date_type').val();
+      //alert(date_type);
+      var today = new Date();
+      var yyyy =0;
+      var yyyy1 = 0;
+      if(date_type == 'Q1'){
+        yyyy = today.getFullYear();
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-04-01');
+        $('.date-picker').attr('data-date-end-date',yyyy+'-06-30');
+      }else if(date_type == 'Q2'){
+        yyyy = today.getFullYear();
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-07-01');
+        $('.date-picker').attr('data-date-start-date',yyyy+'-09-30');
+      }else if(date_type == 'Q3'){
+        yyyy = today.getFullYear();
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-10-01');
+        $('.date-picker').attr('data-date-start-date',yyyy+'-12-31');
+      }else if(date_type == 'Q4'){
+        yyyy = today.getFullYear()+1;
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-01-01');
+        $('.date-picker').attr('data-date-start-date',yyyy+'-03-31');
+      }else if(date_type == 'H1'){
+        yyyy = today.getFullYear();
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-04-01');
+        $('.date-picker').attr('data-date-start-date',yyyy+'-09-30');
+      }else if(date_type == 'H1'){
+        yyyy = today.getFullYear();
+        yyyy1 = today.getFullYear()+1;
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-10-01');
+        $('.date-picker').attr('data-date-start-date',yyyy1+'-03-31');
+      }
+      if(date_type == 'Y'){
+        yyyy = today.getFullYear();
+        yyyy1 = today.getFullYear()+1;
+         
+        $('.date-picker').attr('data-date-start-date',yyyy+'-04-01');
+        $('.date-picker').attr('data-date-start-date',yyyy1+'-03-31')
+      }
+      return 0;
+  }
 

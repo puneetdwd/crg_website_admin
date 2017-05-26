@@ -202,7 +202,7 @@
                                                     
                                                     <td style="text-align:center;">
                                                         <?php if($report['cv_name'] != 'NA') { ?>
-                                                            <a href="<?php echo base_url(); ?>/<?php echo $report['cv_name']; ?>" target="_blank"><?php echo $report['cv_name']; ?></a>
+                                                            <a href="<?php echo base_url(); ?>/assets/uploads/<?php echo $report['cv_name']; ?>" target="_blank"><?php echo $report['cv_name']; ?></a>
                                                         <?php } else { ?>
                                                             NA
                                                         <?php } ?>

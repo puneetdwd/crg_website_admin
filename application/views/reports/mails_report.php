@@ -52,7 +52,8 @@
                                             <div class="form-group" id="report-sel-date-type-error">
                                                 <label class="control-label">Select Date Type:</label>
 
-                                                <select name="date_type" class="form-control select2me" data-placeholder="Select Date Type" data-error-container="#report-sel-date-type-error">
+                                                <select name="date_type" id="date_type" class="form-control select2me" data-placeholder="Select Date Type" onchange="return set_date_range();"
+                                                        data-error-container="#report-sel-date-type-error">
                                                     <?php $date_type = $this->input->get('date_type');?>
                                                     <option value=""></option>
                                                     <option value="Q1" <?php if($date_type == 'Q1') { ?> selected="selected" <?php } ?>>
