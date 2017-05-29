@@ -185,7 +185,7 @@
                                                 <th style="text-align:center;">Mobile</th>
                                                 <th style="text-align:center;">Comment</th>
                                                 <th style="text-align:center;">Attachment</th>
-                                                <th style="text-align:center;">Date</th>
+                                                <th nowrap style="text-align:center;">Date</th>
                                                 <th style="text-align:center;">Action</th>
                                             </tr>
                                         </thead>
@@ -208,15 +208,15 @@
                                                         <?php } ?>
                                                     </td>
                                                     
-                                                    <td style="text-align:center;"><?php echo date('y-m-d H:i', strtotime($report['datetime'])); ?></td>
+                                                    <td nowrap style="text-align:center;"><?php echo date('y-m-d H:i', strtotime($report['datetime'])); ?></td>
                                                     <td style="text-align:center;">
                                                         <?php if($report['type'] == 'Contact Us') { ?>
-                                                            <a href="<?php echo base_url(); ?>reports/delete_contact_us/<?php echo $report['id']; ?>">Delete</a>
+                                                            <a class="button small gray" href="<?php echo base_url(); ?>reports/delete_contact_us/<?php echo $report['id']; ?>" data-confirm="Are you sure you want to delete this record?">Delete</a>
                                                         
                                                         <?php } else if($report['type'] == 'Subscription') { ?>
-                                                            <a href="<?php echo base_url(); ?>reports/delete_subscription/<?php echo $report['id']; ?>">Delete</a>
+                                                            <a class="button small gray" href="<?php echo base_url(); ?>reports/delete_subscription/<?php echo $report['id']; ?>" data-confirm="Are you sure you want to delete this record?">Delete</a>
                                                         <?php } else  { ?>
-                                                            <a href="<?php echo base_url(); ?>reports/delete_career/<?php echo $report['id']; ?>">Delete</a>    
+                                                            <a class="button small gray" href="<?php echo base_url(); ?>reports/delete_career/<?php echo $report['id']; ?>" data-confirm="Are you sure you want to delete this record?">Delete</a>    
                                                         <?php } ?>
                                                     </td>   
                                                 </tr>

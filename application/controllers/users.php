@@ -22,7 +22,7 @@ class Users extends Admin_Controller {
     }
 
     public function add($id = '') {
-        $this->is_admin_user();
+        //$this->is_admin_user();
         $data = array();
         
         $this->load->model('Product_model');
@@ -43,7 +43,8 @@ class Users extends Admin_Controller {
         //print_r($data['zones']); exit;
 
         if(!empty($id)) {
-            $user = $this->User_model->get_user_by_id($id);
+            $user = $this->User_model->get_user_by_id($id); 
+            //echo $this->db->last_query(); exit;
             
             if(!$user){
                 redirect(base_url().'users');

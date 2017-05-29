@@ -830,6 +830,10 @@ class Report_model extends CI_Model {
            $sql .= " AND type = ?";
            $pass_array[] = $type;
        }
+       
+       if($type == 'atlassian'){
+           $sql .= " AND type IN('download free trial','Jira Services','Jira health check','confluence service','atlassian training','Get In Touch', 'Book Assigment')";
+       }
 
        $result = $this->db->query($sql, $pass_array);
        return $result->result_array();
