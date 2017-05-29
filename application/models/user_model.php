@@ -53,15 +53,15 @@ class User_model extends CI_Model {
         ON FIND_IN_SET(p.id, u.product_id)
         WHERE u.id = ?";
         
-        /* $pass_array = array($id);
-        if($this->product_id) {
+        $pass_array = array($id);
+        /* if($this->product_id) {
             $sql .= ' AND p.id = ?';
             $pass_array[] = $this->product_id;
         } */
 
         $sql .= " GROUP BY u.id";
         
-        return $this->db->query($sql)->row_array();
+        return $this->db->query($sql, $pass_array)->row_array();
     }
     
     function get_supplier_user($id) {
