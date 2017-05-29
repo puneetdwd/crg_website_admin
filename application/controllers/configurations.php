@@ -45,8 +45,8 @@ class Configurations extends Admin_Controller {
                 $post_data ['email'] = $this->input->post('mail');
                 $configuration_id = $this->Configuration_model->update_configuration($post_data, $this->input->post('id'));
                 if($configuration_id) {
-                    $msg = isset($configuration['id']) ? 'updated' : 'added';
-                    $this->session->set_flashdata('success', 'Configuration successfully '.$msg.'.');
+                    $msg = isset($configuration['id']) ? 'updated' : 'Added';
+                    $this->session->set_flashdata('success', 'Configuration Successfully '.$msg.'.');
 
                     redirect(base_url().'configurations');
                 } else {

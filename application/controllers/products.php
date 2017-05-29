@@ -41,14 +41,16 @@ class Products extends Admin_Controller {
             $post_data = $this->input->post();
             
             $response = $this->Product_model->add_product($post_data, $product_id); 
+            
             if($response) {
                 $this->session->set_flashdata('success', 'Product successfully '.(($product_id) ? 'updated' : 'added').'.');
                 redirect(base_url().'products');
             } else {
                 $data['error'] = 'Something went wrong, Please try again';
             }
+            
         }
-        
+        //$response = $this->Product_model->generate_product_code();
         $this->template->write_view('content', 'products/add_product', $data);
         $this->template->render();
     }

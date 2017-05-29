@@ -49,7 +49,7 @@
                                 <tr>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Username</th>
+                                    <th>Email</th>
                                     <th class="no_sort">User Type</th>
                                     <?php if(!$this->product_id) { ?>
                                         <th>Product</th>

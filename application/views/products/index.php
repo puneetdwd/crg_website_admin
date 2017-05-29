@@ -60,7 +60,7 @@
                                         <!--<td><?php echo $product['org_id']; ?></td>
                                         <td><?php echo $product['org_name']; ?></td>-->
                                         <td><?php echo $product['code']; ?></td>
-                                        <td><?php echo $product['name']; ?></td>
+                                        <td><?php echo ucwords($product['name']); ?></td>
                                         <td nowrap>
                                             <a class="button small gray" 
                                                 href="<?php echo base_url()."products/add_product/".$product['id'];?>">

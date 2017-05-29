@@ -71,7 +71,7 @@
                             </div>-->
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <!--<div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="code">Product Code:
                                         <span class="required">*</span></label>
@@ -80,7 +80,7 @@
                                         <span class="help-block">
                                         </span>
                                     </div>
-                                </div>
+                                </div>-->
                                 
                                 <div class="col-md-6">
                                     <div class="form-group">

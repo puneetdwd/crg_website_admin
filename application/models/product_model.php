@@ -2,11 +2,12 @@
 class Product_model extends CI_Model {
 
     function add_product($data, $product_id){
-        $needed_array = array('org_id', 'org_name', 'code', 'name');
+        $needed_array = array('org_id', 'org_name', 'name');
         $data = array_intersect_key($data, array_flip($needed_array));
 
         if(empty($product_id)) {
             $data['created'] = date("Y-m-d H:i:s");
+            $data['code'] = $this->generate_product_code();
             return (($this->db->insert('products', $data)) ? $this->db->insert_id() : False);
         } else {
             $this->db->where('id', $product_id);
@@ -296,5 +297,24 @@ class Product_model extends CI_Model {
         ) AND product_id = ?";
         
         return $this->db->query($sql, array($product_id, $product_id));
+    }
+    
+    function generate_product_code() {
+        $this->db->select('MAX(code) as code');
+        $record = $this->db->get('products');
+
+        $code = 0;
+        if($record->num_rows() > 0) {
+            $record = $record->row_array();
+            $code =  $record['code'];
+        }
+
+        if(empty($code)) {
+            return 'PR-'.str_pad(1, 3, '0', STR_PAD_LEFT);
+        }
+
+        $new_code = (int)str_replace('PR-', '', $code) + 1;
+        return 'PR-'.str_pad($new_code, 3, '0', STR_PAD_LEFT);
+
     }
 }

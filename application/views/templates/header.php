@@ -168,7 +168,7 @@
                         
                         <li class="dropdown more-dropdown <?php if($page == 'reports') { ?>active selected<?php } ?>">
                             <a href="javascript:;" class="text-uppercase">
-                                <i class="icon-layers"></i> Reports 
+                                <i class="icon-layers"></i> Website Insights 
                             </a>
                             <ul class="dropdown-menu">
                                 <li>

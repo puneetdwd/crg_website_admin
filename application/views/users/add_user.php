@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <!--<div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="username">Username
                                         <span class="required">*</span></label>
@@ -79,8 +79,18 @@
                                         <span class="help-block">
                                         </span>
                                     </div>
+                                </div>-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email
+                                        <span class="required">*</span></label>
+                                        <input type="text" class="required form-control" name="email" placeholder="Email ID *"
+                                        value="<?php echo isset($user['email']) ? $user['email'] : ''; ?>">
+                                        <span class="help-block">
+                                        </span>
+                                    </div>
                                 </div>
-
+                                
                                 <?php if(isset($user['id'])) { ?>
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -102,18 +112,6 @@
                             </div>
 
                             <div class="row">
-                                
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label" for="email">Email
-                                        <span class="required">*</span></label>
-                                        <input type="text" class="required form-control" name="email" placeholder="Email ID *"
-                                        value="<?php echo isset($user['email']) ? $user['email'] : ''; ?>">
-                                        <span class="help-block">
-                                        </span>
-                                    </div>
-                                </div>
-                                
                                 <div class="col-md-6">
                                     <div class="form-group" id="add-user-product-error">
                                         <label class="control-label" for="product_id">Product:

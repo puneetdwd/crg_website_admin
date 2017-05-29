@@ -207,7 +207,8 @@
                                                             NA
                                                         <?php } ?>
                                                     </td>
-                                                    <td style="text-align:center;"><?php echo $report['datetime']; ?></td>
+                                                    
+                                                    <td style="text-align:center;"><?php echo date('y-m-d H:i', strtotime($report['datetime'])); ?></td>
                                                     <td style="text-align:center;">
                                                         <?php if($report['type'] == 'Contact Us') { ?>
                                                             <a href="<?php echo base_url(); ?>reports/delete_contact_us/<?php echo $report['id']; ?>">Delete</a>

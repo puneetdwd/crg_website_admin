@@ -59,7 +59,7 @@ class Users extends Admin_Controller {
             $validate = $this->form_validation;
             $validate->set_rules('first_name', 'First Name', 'trim|required|xss_clean');
             $validate->set_rules('last_name', 'Last Name', 'trim|required|xss_clean');
-            $validate->set_rules('username', 'Username', 'trim|required|xss_clean');
+            //$validate->set_rules('username', 'Username', 'trim|required|xss_clean');
             $validate->set_rules('email', 'Email', 'trim|required|xss_clean');
             $validate->set_rules('product_id', 'Product', 'required|xss_clean');
 
@@ -79,6 +79,7 @@ class Users extends Admin_Controller {
                     //$post_data['product_id'] = $this->product_id;
                     
                     //echo "<pre>"; print_r($_POST); exit;
+                    $post_data['username']= $this->input->post('email');
                     $user_id = $this->User_model->update_user($post_data, $id);
                     if($user_id) {
 
