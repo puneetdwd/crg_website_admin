@@ -62,13 +62,13 @@
                         </form>
                     </div>
                     
-                    <div class="page-logo-text" style="text-align: center; font-size: 20px; margin-top: 34px; color: #C80541;">ADMIN PANEL - WEBSITE LEADS</div>
+                    <div class="page-logo-text" style="text-align: center; font-size: 20px; margin-top: 34px; color: #f15d23;">ADMIN PANEL - WEBSITE LEADS</div>
                 </div>
             </header>
             
             <div class="container">
                 <section id="hero-area" class="hero-area tab">
-                    <img src="assets/images/home_banner.jpg" >
+                    <img src="assets/images/home_banner.jpg" style="height: 445px;" >
                 </section>
             </div>
             
